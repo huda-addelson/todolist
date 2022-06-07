@@ -1,4 +1,5 @@
-# todolist
+# Todolist
+Sebuah Program untuk Menambah, Menghapus Todolist di penyimpanan sementara dengan pemrogramann javascript
 # Dibuat dengan
 * HTML
 * CSS
