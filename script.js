@@ -15,9 +15,9 @@ inputTodo.addEventListener('keyup', function () {
         inputTodo.classList.remove("active"); // menghapus class active
     }
 })
-tampilTodo()
+tampilTodo();
 
-// jika user mengklik button tambah
+// 2. jika user mengklik button tambah
 btnTambah.addEventListener('click', function () {
     let userData = inputTodo.value;
     let getLocalStorage = localStorage.getItem("New Todo"); // mendapatkan local storage
@@ -31,7 +31,7 @@ btnTambah.addEventListener('click', function () {
     tampilTodo();
 })
 
-// function untuk menampilkan todo 
+// 3. function untuk menampilkan todo 
 function tampilTodo() {
     let getLocalStorage = localStorage.getItem("New Todo"); // mendapatkan local storage
     if (getLocalStorage == null) { // jika localstorage == null
@@ -50,7 +50,7 @@ function tampilTodo() {
     inputTodo.value = "";
 }
 
-// function untuk menghapus todo
+// 4. function untuk menghapus todo
 function hapusTodo(index) {
     let getLocalStorage = localStorage.getItem("New Todo"); // mendapatkan local storage
     listArry = JSON.parse(getLocalStorage); // mengubah json string ke js object
@@ -59,7 +59,7 @@ function hapusTodo(index) {
     tampilTodo();
 }
 
-// menghapus semua todolist
+// 5. menghapus semua todolist
 hapusSemua.addEventListener('click', function () {
     listArry = [];
     localStorage.setItem("New Todo", JSON.stringify(listArry)); // mengubah js object ke json string
